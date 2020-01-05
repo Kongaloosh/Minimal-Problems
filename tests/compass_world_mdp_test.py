@@ -1,5 +1,5 @@
 import unittest
-from compass_world_mdp import CustomMDP
+from problems.compass_world_mdp import CustomMDP
 
 
 class TestSum(unittest.TestCase):

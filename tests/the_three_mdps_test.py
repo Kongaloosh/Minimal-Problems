@@ -1,5 +1,5 @@
 import unittest
-from the_three_mdps import ChainProblem, ColliderProblem, ConfounderProblem
+from problems.the_three_mdps import ColliderProblem, ConfounderProblem
 
 
 class TestCollider(unittest.TestCase):
