@@ -3,7 +3,7 @@ x = 5
 y = 5
 
 
-class CustomMDP():
+class CustomMDP:
     """
         Available actions:
             0: move forwards
@@ -91,10 +91,10 @@ class CustomMDP():
         if queue_action == 0 or queue_action == 2 or queue_action is None:  # forwards, backwards, or nothing
             return self.__facing
 
-        elif queue_action == 3: # turn left
+        elif queue_action == 3:  # turn left
             return int((self.__facing - 1) % 4)
 
-        elif queue_action == 1: # turn right
+        elif queue_action == 1:  # turn right
             return int((self.__facing + 1) % 4)
 
     def get_ground_truth(self):
@@ -143,9 +143,9 @@ class CustomMDP():
             a = self.__facing if self.__state_x == 0 else 0
 
         if a == self.__current_goal:
-            new_goal = random.randint(0,3)
+            new_goal = random.randint(0, 3)
             while new_goal == self.__current_goal:
-                new_goal = random.randint(0,3)
+                new_goal = random.randint(0, 3)
             self.__current_goal = new_goal
             reward = 1
 

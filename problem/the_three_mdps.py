@@ -10,7 +10,7 @@ the mass variable is updated on each time-step. For the confounder, mass is a fu
 variable. For the chain, the mass is a function of the previous mass and the hidden variable; the hidden variable,
 is influenced by the action, but the action does not influence the mass directly.
 """
-from pysrc.experiments.problem.mdp import MDP
+from mdp import MDP
 
 
 class ColliderProblem(MDP):
