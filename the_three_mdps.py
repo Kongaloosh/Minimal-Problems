@@ -36,19 +36,6 @@ class ColliderProblem(MDP):
         """Gets the information needed to define the world state."""
         return [self.__current_cycle, self.__current_cycle_step]
 
-    # def get_ground_truth(self):
-    #     truth = [0,0]
-    #     if 0 != bool(self.__current_cycle):
-    #         truth[0] = 0
-    #     else:
-    #         truth[0] = self.__cycle_len - self.__current_cycle_step
-    #     if 1 != bool(self.__current_cycle):
-    #         truth[1] = 0
-    #     else:
-    #         truth[1] = self.__cycle_len -  self.__current_cycle_step
-    #     print(self.__current_cycle, self.__current_cycle_step)
-    #     return truth
-
     def get_observations(self):
         """Gets the current observation available to the agent given the world state."""
         return [self.__result], self.__result
