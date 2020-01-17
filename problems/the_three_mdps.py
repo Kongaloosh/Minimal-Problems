@@ -24,12 +24,12 @@ class ColliderProblem(MDP):
 
     def step(self, a):
         """Given an action, updates and returns the observations available."""
+        self.__action = a
         self.__result = self.__current_cycle != self.__action
         self.__current_cycle_step += 1
         if self.__current_cycle_step == self.__cycle_len:
             self.__current_cycle = not self.__current_cycle
         self.__current_cycle_step = self.__current_cycle_step % self.__cycle_len
-        self.__action = a
         return self.get_observations()
 
     def get_state(self):
